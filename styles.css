@@ -56,6 +56,9 @@
     justify-self: start;
     display: flex;
     align-items: center;
+    background-color: rgb(227, 227, 243);
+    border-radius: 20px;
+
 
 }
 
