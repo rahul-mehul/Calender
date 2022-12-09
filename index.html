@@ -5,19 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/Calender/styles.css">
+    <script defer src="/Calender/script.js"></script>
+    <title>📅Calendar📅</title>
 </head>
 
-<body>
+<body onload="renderDate()">
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="month">
 
-    <h1>Calendar</h1>
-
-    <div id="calendar" class="calendar">
-        <span>Add something here</span>
+                <div class="prev" onclick="moveDate('prev')">
+                    <span>&#10094;</span>
+                </div>
+                <div>
+                    <h1 id="month"></h1>
+                    <p id="date_str"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095;</span>
+                </div>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"></div>
+        </div>
     </div>
-
 </body>
 
 </html>

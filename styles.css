@@ -1,85 +1,120 @@
+body {
+    font-family: "Lato", sans-serif;
+
+}
+
 * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 
+.wrapper {
+    background-color: rgb(169, 200, 231);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+
 .calendar {
-    padding: 1em;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px 4px rgba(86, 149, 221, 0.2);
+    width: 410px;
+    height: 380px;
     border-radius: 10px;
-
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: max-content;
-    grid-auto-flow: row;
-
-    color: black;
-    background-color: hsl(231, 20%, 85%);
 }
 
-.cell {
-    width: 70%;
-    padding: 0.4em 0.8em;
-    text-align: center;
-
-}
-
-.cell:hover,
-.cell:focus {
-    color: hsl(231, 20%, 85%);
-    background-color: #bf4e30;
-    border-radius: 50px;
-}
-
-.cell:empty {
-    width: 0;
-    padding: 0;
-}
-
-.cell--unselectable {
-    color: hsl(231, 20%, 50%);
-
-
-}
-
-.cell--unselectable:hover,
-.cell--unselectable:focus {
-    color: hsl(231, 20%, 50%);
-    background-color: transparent;
-
-}
-
-.date-text {
-    padding: 1em 0.8em;
-    grid-column: 1 / 5;
-    justify-self: start;
+.month {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(227, 227, 243);
-    border-radius: 20px;
-
-
+    width: 100%;
+    padding: 40px 30px;
+    color: rgb(124, 233, 236);
+    height: 20%;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, #1da6e6 0%, #213de0 55%, #5810b6 100%);
 }
 
-.button {
-    cursor: pointer;
-
+#date_str {
+    margin-left: 50px;
+    margin-top: 5px;
+    color: rgb(238, 217, 235);
 }
 
-body {
-    min-height: 100vh;
+#month:hover {
+    font-size: 35px;
+}
 
+
+
+.weekdays {
+    background-color: #9e9e9e;
+    ;
+    color: rgb(8, 8, 8);
+    padding: 10px 0;
     display: flex;
-    flex-direction: column;
+}
+
+.days {
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div,
+.days div {
+    text-align: center;
+    width: 14.28%;
+}
+
+.days div {
+    padding: 10px 0;
+    margin-bottom: 5px;
+    transition: all 0.4s;
+}
+
+.prev_date {
+    color: #999;
+}
+
+.today {
+    background-color: #f80b0b;
+    color: #fff;
+    border-radius: 100px;
+}
+
+.days div:hover {
+    cursor: pointer;
+    background-color: #8ab8ec;
+    border-radius: 20px;
+    font-weight: 600;
+    color: white;
+
+}
+
+.prev,
+.next {
+    display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: 'Ubuntu', sans-serif;
-    color: hsl(231, 20%, 85%);
-    background-color: #121420;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.12);
+    transition: all 0.4s;
 }
 
-h1 {
-    margin: 0.5em 0;
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#month {
+    font-size: 30px;
+    font-weight: 500;
 }
